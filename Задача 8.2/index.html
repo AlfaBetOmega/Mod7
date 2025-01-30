@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 8.2</title>
+</head>
+<body>
+
+   <script>
+      const users = [
+         { name: 'Сергей', age: 30, sports: true },
+         { name: 'Мария', age: 22, sports: false },
+         { name: 'Михаил', age: 28, sports: true },
+         { name: 'Ольга', age: 15, sports: true },
+         { name: 'Семён', age: 24, sports: true },
+         { name: 'Елена', age: 40, sports: false }
+        ];
+
+      function getActiveUsers(users) {
+        return users
+          .filter(user => user.age > 25 && user.sports)
+          .sort((a, b) => a.age - b.age)
+          .map(user => user.name);
+        };
+
+        const activeUserNames = getActiveUsers(users);
+        console.log(activeUserNames);
+   </script>
+</body>
+</html>

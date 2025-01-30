@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 8.8.1</title>
+</head>
+<body>
+
+    <script>
+        let word = 'Cosmopoliten and Life, sorry';
+        let vowelCount = countVowels(word);
+        function countVowels(word) {
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+            const lowerCaseWord = word.toLowerCase();
+            const filteredVowels = lowerCaseWord.split('').filter(letter => vowels.includes(letter));
+            const vowelCount = filteredVowels.length;
+
+            console.log(`Количество гласных букв: ${vowelCount}`);
+            return vowelCount;        
+        }
+    </script>
+</body>
+</html>
